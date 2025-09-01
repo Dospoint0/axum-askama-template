@@ -1,0 +1,9 @@
+# Rust
+/target
+.DS_Store
+
+# Environment
+.env
+
+# Database
+/database

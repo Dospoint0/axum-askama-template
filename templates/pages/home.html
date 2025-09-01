@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block main %}
+    <h1>Welcome to the Axum + Askama template!</h1>
+    <p>This is the home page.</p>
+    <p>This page has been viewed <strong>{{ view_count }}</strong> times.</p>
+    <p>Check out <a href="/static/css/global.css">the stylesheet</a>.</p>
+    <p>Try a <a href="/not-a-real-page">non-existent page</a> to see the 404 handler.</p>
+    <p>Or <a href="/servererror">trigger a server error</a> to see the 500 handler.</p>
+{% endblock main %}

@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Sign-Up {%call super%}
+{% endblock title %}
+
+{% block meta %}
+    <meta name="Description" content="This is the Sign-Up page">
+{% endblock meta %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/auth.css">
+{% endblock %}
+
+{% block main %}
+<div class="auth-container">
+    <h1 class="auth-title">Log-In</h1>
+    <form method="post" action="/login">
+        <div class="form-field">
+            <input type="email" id="email" name="email" placeholder="Please enter your email:" required>
+            <span id="email-error" class="error-message">
+                {% if let Some(error) = email_error %}{{ error }}{% endif %}
+            </span>
+        </div>
+        <div class="form-field">
+            <input type="password" id="password" name="password" placeholder="Enter your password:" required>
+            <span id="password-error" class="error-message">
+                {% if let Some(error) = password_error %}{{ error }}{% endif %}
+            </span>
+        </div>
+        <button type="submit" id="login-button">Log-In</button>
+    </form>
+    <form method="get" action="/signup">
+        <button>Don't have an account? Sign-Up</button>
+    </form>
+</div>
+{% endblock main %}
+
+{% block scripts %}
+
+{% endblock scripts %}

@@ -1,0 +1,25 @@
+[package]
+name = "axum_askama_template"
+version = "0.1.0"
+edition = "2021"
+description = "A template for building websites with Axum, Askama, and Tokio."
+license = "MIT"
+
+[dependencies]
+tokio = { version = "*", features = ["full"] }
+axum = { version = "*", features = ["macros"] }
+askama = { version = "*" }
+tower-http = { version = "*", features = ["fs", "trace"] }
+
+tracing = "*"
+tracing-subscriber = { version = "*", features = ["env-filter"] }
+
+#FORM DATA EXTRACTION DEPENDANCIES:
+
+serde = {version = "*", features = ["derive"]}
+validator ={ version = "*", features = ["derive"]}
+regex ="*"
+#sqlite = {version = "0.37.0", features = ["bundled"]}
+bcrypt = "0.17.1"
+sqlx = {version = "*", features = ["sqlite", "runtime-tokio", "macros"] }
+dotenvy = "0.15.7"
