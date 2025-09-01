@@ -31,7 +31,7 @@ This is a feature-rich template for jumpstarting website development with Rust, 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/naifl/axum-askama-template.git
+    git clone https://github.com/Dospoint0/axum-askama-template
     cd axum-askama-template
     ```
 
